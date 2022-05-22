@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'my_site/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'my_site/libs/ol/ol.css' %}"/>
+    <script src="{% static 'my_site/libs/ol/ol.js' %}"></script>
+    <script src="{% static 'my_site/libs/jquery/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'my_site/libs/jquery/jquery.validate.min.js' %}"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- <header class="header"></header> -->
+    <main class="content">
+        <section class="section-main{{ page_name }} container">
+            <div class="section-main__header">
+                <nav class="section-main__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link"
+                               href="{% url 'main_page' %}">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <div class="dropdown" tabindex="0">
+                                <a class="menu__list-link dropdown__open-link">
+                                    Услуги
+                                </a>
+                                <div class="dropdown__content">
+                                    <a class="dropdown__link"
+                                       href="{% url 'reverse_engineering' %}">
+                                        Реверс-инжиниринг
+                                    </a>
+                                    <a class="dropdown__link"
+                                       href="{% url 'visualize' %}">
+                                        3D моделирование
+                                    </a>
+                                    <a class="dropdown__link"
+                                       href="{% url 'drafts' %}">
+                                        Разработка КД
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link"
+                               href="{% url 'projects' %}">
+                                Проекты
+
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#contacts">
+                                Контакты
+
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="section-main__menu-contacts menu-contacts">
+                    <a class="menu-contacts__number" href="tel:+7(999)999-99-99">
+                        +7(999)999-99-99
+                    </a>
+                    <a class="menu-contacts__link" href="tel:+7(999)999-99-99">
+                        <img
+                                src="{% static 'my_site/images/link/link-number.png' %}"
+                             alt="Номер телефона">
+                    </a>
+                    <a class="menu-contacts__link" href="#">
+                        <img
+                                src="{% static 'my_site/images/link/link-telegram.png' %}"
+                             alt="Telegram">
+                    </a>
+                    <a class="menu-contacts__link" href="#">
+                        <img
+                                src="{% static 'my_site/images/link/link-whatsapp.png' %}"
+                             alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+
+            <div class="section-main__title-container">
+                <h1 class="section-main__title">
+                    {{ title }}
+                </h1>
+            </div>
+
+            <div class="section-main__info">
+                Мы готовы обеспечить своих заказчиков необходимым набором конструкторской документации и 3D моделями на имеющиеся образцы промышленного оборудования и отдельные детали.
+            </div>
+
+            <button class="section-main__button button-open-form">
+                Получить расчет
+            </button>
+        </section>
+
+            {% block content %}
+            {% endblock content %}
+
+
+        <section class="section-footer container">
+            <div class="section-footer__image"></div>
+            <div class="section-footer__inner">
+                <div class="section-footer__contacts" id="contacts">
+                    <h1 class="section-footer__contacts-title">
+                        Контакты
+                    </h1>
+                    <div class="section-footer__contacts-info">
+                        <p class="section-footer__contacts-item">
+                            Телефон: +7(999)999-99-99
+                        </p>
+                        <p class="section-footer__contacts-item">
+                            Имейл: info@mail.ru
+                        </p>
+                        <p class="section-footer__contacts-item">
+                            248000, Калуга, ул. Площадь Победы д.1
+                        </p>
+                    </div>
+                    <div class="section-footer__menu-contacts menu-contacts">
+                        <a class="menu-contacts__link" href="tel:+7(999)999-99-99">
+                            <img
+                                    src="{% static 'my_site/images/link/link-number.png' %}"
+                                 alt="Номер телефона">
+                        </a>
+                        <a class="menu-contacts__link" href="#">
+                            <img
+                                    src="{% static 'my_site/images/link/link-telegram.png' %}" alt="Telegram">
+                        </a>
+                        <a class="menu-contacts__link" href="#">
+                            <img
+                                    src="{% static 'my_site/images/link/link-whatsapp.png' %}" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+                <div class="section-footer__map">
+                    <div id="map" class="map"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal">
+            <div class="modal__content">
+                <h2 class="modal__title">
+                    Отправьте заявку для расчета
+                </h2>
+                <form class="modal__form" name="form" id="form" type="text"
+                      enctype="multipart/form-data"
+                      action="/form" method="POST">
+                    <input class="modal__input" name="name" id="name" type="text" autocomplete="name" placeholder="Меня зовут">
+                    <input class="modal__input" name="email" id="email" type="email" autocomplete="email" placeholder="E-mail">
+                    <input class="modal__input" name="tel" id="tel" type="tel" autocomplete="tel" placeholder="+7 999 999 99 99">
+                    <input class="modal__input" name="comment" id="comment" type="text" placeholder="Комментарий">
+                    <div class="modal__files">
+                        <input class="modal__input-files" name="file" id="file" type="file" data-multiple-caption="Прикреплено: {count}" multiple />
+                        <label class="modal__input-files-label" for="file">
+                            Прикрепить
+                        </label>
+                        <p class="modal__files-info">
+                            ТЗ, ТУ и всё то, что поможет нам оценить объём работ
+                        </p>
+                    </div>
+                    <button class="modal__button-send">
+                        Отправить
+                    </button>
+                </form>
+                <p class="modal__info">
+                    Мы не передаем данные третьим лицам и не рассылаем рекламу
+                </p>
+            </div>
+            <span class="modal__btn-close"></span>
+        </div>
+    </main>
+    <!-- <footer class="footer"></footer> -->
+</div>
+<script type="text/javascript" src="{% static 'my_site/js/index.js' %}"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

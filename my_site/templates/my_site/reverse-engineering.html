@@ -1,0 +1,148 @@
+{% extends 'my_site/base.html' %}
+
+        {% block content %}
+        <section class="section-prices container">
+            <div class="section-prices__inner">
+                <h2 class="section-prices__title title-section">
+                    Цены на реверс-инжиниринг и 3D сканирование
+                </h2>
+                <div class="section-prices__prices-table prices-table">
+                    <div class="prices-table__row">
+                        <div class="prices-table__col-name">
+                            <p class="prices-table__text-name">
+                                Сканирование в .STL
+                            </p>
+                        </div>
+                        <ul class="prices-table__col-list">
+                            <li>подготовка объекта к сканированию</li>
+                            <li>3D сканирование с точностью до 20 мк</li>
+                            <li>обработка полигональной модели от шумов и дефектов</li>
+                        </ul>
+                        <div class="prices-table__col-price">
+                            <p class="prices-table__text-price">
+                                от 4 000 ₽
+                            </p>
+                            <p class="prices-table__text-time">
+                                от 1 дня
+                            </p>
+                        </div>
+                    </div>
+                    <div class="prices-table__row">
+                        <div class="prices-table__col-name">
+                            <p class="prices-table__text-name">
+                                Проектирование в .STP
+                            </p>
+                        </div>
+                        <ul class="prices-table__col-list">
+                            <li>сканирование в .STL</li>
+                            <li>разработка твердотельной CAD модели с деревом построения</li>
+                        </ul>
+                        <div class="prices-table__col-price">
+                            <p class="prices-table__text-price">
+                                от 8 000 ₽
+                            </p>
+                            <p class="prices-table__text-time">
+                                от 3 дней
+                            </p>
+                        </div>
+                    </div>
+                    <div class="prices-table__row">
+                        <div class="prices-table__col-name">
+                            <p class="prices-table__text-name">
+                                Сканирование с оформлением чертежа
+                            </p>
+                        </div>
+                        <ul class="prices-table__col-list">
+                            <li>сканирование в .STL</li>
+                            <li>сканирование в .STP</li>
+                            <li>оформление рабочих чертежей по полученной модели в соответствии с ГОСТ и ЕСКД</li>
+                        </ul>
+                        <div class="prices-table__col-price">
+                            <p class="prices-table__text-price">
+                                от 12 000 ₽
+                            </p>
+                            <p class="prices-table__text-time">
+                                от 4 дней
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="section-prices__button button-open-form">
+                    Отправить данные для расчета
+                </button>
+            </div>
+        </section>
+
+        <section class="section-faq container">
+            <h2 class="section-faq__title title-section">
+                Часто задаваемые вопросы
+            </h2>
+            <div class="section-faq__faq-list faq-list">
+                <ul class="faq-list__ul">
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Что требуется, чтобы оценить стоимость 3D сканирования?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                Для более точной оценки стоимости работ необходимо предоставить фото с разных ракурсов и сопроводительную информацию: назначение изделия\детали, условия эксплуатации.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Каким образом передается образец для сканирования?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                Если вы находитесь в Санкт-Петербурге, то мы можем забрать ваш образец самостоятельно. Для заказчиков из других городов мы можем организовать забор через DPD. Услуги по доставке будут включены в стоимость сканирования.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Можно ли организовать на территории заказчика?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                Это возможно. Выезд на территорию заказчика со всем необходимым оборудованием рассчитывается индивидуально под каждый заказ.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Как передаются результаты работы?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                В большинстве случаев — через загрузку архива с моделью в облако. В случае с большими моделями или разработками под NDA мы передаем данные на диске или флеш-накопителе в зависимости от пожеланий заказчика.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        {% endblock content %}

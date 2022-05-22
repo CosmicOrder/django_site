@@ -1,0 +1,258 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+
+        {% block content %}
+        <section class="section-directions container">
+            <h2 class="section-directions__title title-section">
+                Основные направления нашей деятельности
+            </h2>
+            <div class="section-directions__cards">
+                <a class="card" href="{% url 'reverse_engineering' %}">
+                    <img class="card__image"
+                         src="{% static 'my_site/images/card/card-reverse-engineering.jpg' %}">
+                    <p class="card__title">
+                        Реверс-инжиниринг
+                    </p>
+                    <p class="card__text">
+                        Разработка 3D моделей и КД по имеющимся прототипам с помощью 3D сканера
+                    </p>
+                </a>
+                <a class="card" href="{% url 'drafts' %}">
+                    <img class="card__image"
+                         src="{% static 'my_site/images/card/card-draft.jpg' %}">
+                    <p class="card__title">
+                        Разработка КД
+                    </p>
+                    <p class="card__text">
+                        Оформление всего комплекса конструкторской документации в соответствии с ГОСТ
+                    </p>
+                </a>
+                <a class="card" href="{% url 'visualize' %}">
+                    <img class="card__image"
+                         src="{% static 'my_site/images/card/card-modeling.jpg' %}">
+                    <p class="card__title">
+                        3D-моделирование
+                    </p>
+                    <p class="card__text">
+                        Визуализация имеющихся у вас или разрабатываемых
+                        чертежей в виде 3D-моделей
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section-advantages container">
+            <h2 class="section-advantages__title title-section">
+                Что вы теряете, не работая с нами
+            </h2>
+            <div class="section-advantages__inner">
+                <div class="section-advantages__item">
+<!--                    <ion-icon name="desktop-outline"></ion-icon>-->
+                    <img class="section-advantages__item-image"
+                         src="{% static 'my_site/images/advantage/advantage-workplace.png' %}">
+                    <div class="section-advantages__item-description">
+                        <p class="section-advantages__item-title">
+                            Деньги на организацию рабочего места
+                        </p>
+                        <p class="section-advantages__item-text">
+                            С нами вам не придётся тратить деньги на
+                            организацию рабочего места: на
+                            приобретение офисной мебели, мощного ПК, покупку
+                            лицензионног ПО.
+                        </p>
+                    </div>
+                </div>
+                <div class="section-advantages__item">
+<!--                    <ion-icon name="calculator-outline"></ion-icon>-->
+                    <img class="section-advantages__item-image"
+                         src="{% static 'my_site/images/advantage/advantage-price.png' %}">
+                    <div class="section-advantages__item-description">
+                        <p class="section-advantages__item-title">
+                            Часть прибыли на содержание постоянных сотрудников
+                        </p>
+                        <p class="section-advantages__item-text">
+                            Заказывая у нас вам не нужно нести расходы по
+                            содержанию постоянных сотрудников: выплачивать
+                            зарплаты вне зависимости от их загрузки, платить
+                            страховые взносы, отпускные и больничные.
+                        </p>
+                    </div>
+                </div>
+                <div class="section-advantages__item">
+                    <img class="section-advantages__item-image"
+                         src="{% static 'my_site/images/advantage/advantage-time.png' %}">
+                    <div class="section-advantages__item-description">
+                        <p class="section-advantages__item-title">
+                            Время на поиск квалифицированных специалистов
+                        </p>
+                        <p class="section-advantages__item-text">
+                            Работая с нами вы больше не будете терять время
+                            на поиск квалифицированных специалистов, которые
+                            были бы способны выполнить требуемую задачу
+                        </p>
+                    </div>
+                </div>
+                <div class="section-advantages__item">
+                    <img class="section-advantages__item-image"
+                         src="{% static 'my_site/images/advantage/advantage-education.png' %}">
+                    <div class="section-advantages__item-description">
+                        <p class="section-advantages__item-title">
+                            Возможность развиваться
+                        </p>
+                        <p class="section-advantages__item-text">
+                            Если вы работаете с нами, то у вас появляется
+                            возможность развивать другие направления вашего
+                            бизнеса, так как все заботы по организации
+                            конструторских работ мы берём на себя
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--        <section class="section-prices container">-->
+<!--            <div class="section-prices__inner">-->
+<!--                <h2 class="section-prices__title title-section">-->
+<!--                    Цены на реверс-инжиниринг и 3D сканирование-->
+<!--                </h2>-->
+<!--                <div class="section-prices__prices-table prices-table">-->
+<!--                    <div class="prices-table__row">-->
+<!--                        <div class="prices-table__col-name">-->
+<!--                            <p class="prices-table__text-name">-->
+<!--                                Сканирование в .STL-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <ul class="prices-table__col-list">-->
+<!--                            <li>подготовка объекта к сканированию</li>-->
+<!--                            <li>3D сканирование с точностью до 20 мк</li>-->
+<!--                            <li>обработка полигональной модели от шумов и дефектов</li>-->
+<!--                        </ul>-->
+<!--                        <div class="prices-table__col-price">-->
+<!--                            <p class="prices-table__text-price">-->
+<!--                                от 4 000 ₽-->
+<!--                            </p>-->
+<!--                            <p class="prices-table__text-time">-->
+<!--                                от 1 дня-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="prices-table__row">-->
+<!--                        <div class="prices-table__col-name">-->
+<!--                            <p class="prices-table__text-name">-->
+<!--                                Проектирование в .STP-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <ul class="prices-table__col-list">-->
+<!--                            <li>сканирование в .STL</li>-->
+<!--                            <li>разработка твердотельной CAD модели с деревом построения</li>-->
+<!--                        </ul>-->
+<!--                        <div class="prices-table__col-price">-->
+<!--                            <p class="prices-table__text-price">-->
+<!--                                от 8 000 ₽-->
+<!--                            </p>-->
+<!--                            <p class="prices-table__text-time">-->
+<!--                                от 3 дней-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="prices-table__row">-->
+<!--                        <div class="prices-table__col-name">-->
+<!--                            <p class="prices-table__text-name">-->
+<!--                                Сканирование с оформлением чертежа-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <ul class="prices-table__col-list">-->
+<!--                            <li>сканирование в .STL</li>-->
+<!--                            <li>сканирование в .STP</li>-->
+<!--                            <li>оформление рабочих чертежей по полученной модели в соответствии с ГОСТ и ЕСКД</li>-->
+<!--                        </ul>-->
+<!--                        <div class="prices-table__col-price">-->
+<!--                            <p class="prices-table__text-price">-->
+<!--                                от 12 000 ₽-->
+<!--                            </p>-->
+<!--                            <p class="prices-table__text-time">-->
+<!--                                от 4 дней-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <button class="section-prices__button button-open-form">-->
+<!--                    Отправить данные для расчета-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </section>-->
+
+        <section class="section-faq container">
+            <h2 class="section-faq__title title-section">
+                Часто задаваемые вопросы
+            </h2>
+            <div class="section-faq__faq-list faq-list">
+                <ul class="faq-list__ul">
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Что требуется, чтобы оценить стоимость 3D сканирования?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                Для более точной оценки стоимости работ необходимо предоставить фото с разных ракурсов и сопроводительную информацию: назначение изделия\детали, условия эксплуатации.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Каким образом передается образец для сканирования?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                Если вы находитесь в Санкт-Петербурге, то мы можем забрать ваш образец самостоятельно. Для заказчиков из других городов мы можем организовать забор через DPD. Услуги по доставке будут включены в стоимость сканирования.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Можно ли организовать на территории заказчика?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                Это возможно. Выезд на территорию заказчика со всем необходимым оборудованием рассчитывается индивидуально под каждый заказ.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="faq-list__li">
+                        <div class="faq-list__item">
+                            <div class="faq-list__title-container">
+                                <h3 class="faq-list__title">
+                                    Как передаются результаты работы?
+                                </h3>
+                            </div>
+                            <span class="faq-list__btn-expand"></span>
+                        </div>
+                        <div class="faq-list__content">
+                            <p class="faq-list__text">
+                                В большинстве случаев — через загрузку архива с моделью в облако. В случае с большими моделями или разработками под NDA мы передаем данные на диске или флеш-накопителе в зависимости от пожеланий заказчика.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        {% endblock content %}
+
