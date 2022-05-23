@@ -94,7 +94,9 @@
             </div>
 
             <div class="section-main__info">
-                Мы готовы обеспечить своих заказчиков необходимым набором конструкторской документации и 3D моделями на имеющиеся образцы промышленного оборудования и отдельные детали.
+                {% autoescape off %}
+                {{ description|linebreaks}}
+                {% endautoescape %}
             </div>
 
             <button class="section-main__button button-open-form">

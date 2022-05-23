@@ -1,9 +1,10 @@
 from django.shortcuts import render
 
+from my_site.site_content import main_page_content
+
 
 def index(request):
-    return render(request, 'my_site/index.html',
-                  {'title': 'Конструкторское бюро'})
+    return render(request, 'my_site/index.html', main_page_content)
 
 
 def reverse_engineering(request):
