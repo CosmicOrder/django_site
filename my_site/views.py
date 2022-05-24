@@ -1,5 +1,4 @@
 import os
-from pprint import pprint
 
 import pandas as pd
 from django.shortcuts import render
@@ -47,8 +46,6 @@ def visualize(request):
 
 
 data = {'page_name': '-projects', 'title': 'Портфолио', 'portfolio': portfolio}
-
-pprint(portfolio)
 
 
 def projects(request):
