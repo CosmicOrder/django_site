@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.title-section, .modal .modal__title, .section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-drafts .section-main__title, .section-footer .section-footer__contacts-title {
+.title-section, .modal .modal__title, .section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-projects .section-main__title, .section-main-drafts .section-main__title, .section-footer .section-footer__contacts-title {
   font-family: 'Bahnschrift';
   font-weight: 400;
   letter-spacing: 5px;
@@ -7,14 +7,15 @@
   line-height: normal;
 }
 
-.section-main .section-main__header, .section-main-reverse-engineering .section-main__header, .section-main-visualize .section-main__header, .section-main-drafts .section-main__header, .menu .menu__list-item, .card .card__title,
-.card .card__text, .dropdown .dropdown__content .dropdown__link {
+.section-main .section-main__header, .section-main-reverse-engineering .section-main__header, .section-main-visualize .section-main__header, .section-main-projects .section-main__header, .section-main-drafts .section-main__header, .menu .menu__list-item, .card .card__title,
+.card .card__text, .sample .sample__title,
+.sample .sample__text, .dropdown .dropdown__content .dropdown__link {
   font-family: 'Myriad Pro';
   font-weight: 400;
   letter-spacing: 1px;
 }
 
-.section-main .section-main__info, .section-main-reverse-engineering .section-main__info, .section-main-visualize .section-main__info, .section-main-drafts .section-main__info, .section-advantages .section-advantages__item-title, .section-advantages .section-advantages__item-text, .section-faq .faq-list .faq-list__title, .section-faq .faq-list .faq-list__content, .section-prices, .section-footer .section-footer__contacts-info, .modal .modal__form .modal__input, .modal .modal__files .modal__files-info, .modal .modal__info, .error {
+.section-main .section-main__info, .section-main-reverse-engineering .section-main__info, .section-main-visualize .section-main__info, .section-main-projects .section-main__info, .section-main-drafts .section-main__info, .section-advantages .section-advantages__item-title, .section-advantages .section-advantages__item-text, .section-faq .faq-list .faq-list__title, .section-faq .faq-list .faq-list__content, .section-prices, .section-footer .section-footer__contacts-info, .modal .modal__form .modal__input, .modal .modal__files .modal__files-info, .modal .modal__info, .error {
   font-family: 'Segoe UI';
   font-weight: 300;
   letter-spacing: 1px;
@@ -198,7 +199,7 @@ a:link, a:visited {
   margin: 50px auto;
 }
 
-.section-main, .section-main-reverse-engineering, .section-main-visualize, .section-main-drafts {
+.section-main, .section-main-reverse-engineering, .section-main-visualize, .section-main-projects, .section-main-drafts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,7 +219,7 @@ a:link, a:visited {
   padding: 50px 65px 40px 65px;
 }
 
-.section-main .section-main__header, .section-main-reverse-engineering .section-main__header, .section-main-visualize .section-main__header, .section-main-drafts .section-main__header {
+.section-main .section-main__header, .section-main-reverse-engineering .section-main__header, .section-main-visualize .section-main__header, .section-main-projects .section-main__header, .section-main-drafts .section-main__header {
   font-size: 12pt;
   color: white;
   display: -webkit-box;
@@ -233,13 +234,13 @@ a:link, a:visited {
   padding-bottom: 28px;
 }
 
-.section-main .section-main__menu-contacts, .section-main-reverse-engineering .section-main__menu-contacts, .section-main-visualize .section-main__menu-contacts, .section-main-drafts .section-main__menu-contacts {
+.section-main .section-main__menu-contacts, .section-main-reverse-engineering .section-main__menu-contacts, .section-main-visualize .section-main__menu-contacts, .section-main-projects .section-main__menu-contacts, .section-main-drafts .section-main__menu-contacts {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.section-main .section-main__title-container, .section-main-reverse-engineering .section-main__title-container, .section-main-visualize .section-main__title-container, .section-main-drafts .section-main__title-container {
+.section-main .section-main__title-container, .section-main-reverse-engineering .section-main__title-container, .section-main-visualize .section-main__title-container, .section-main-projects .section-main__title-container, .section-main-drafts .section-main__title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,19 +248,19 @@ a:link, a:visited {
   padding-bottom: 350px;
 }
 
-.section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-drafts .section-main__title {
+.section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-projects .section-main__title, .section-main-drafts .section-main__title {
   line-height: 60px;
   font-size: 36pt;
   color: white;
 }
 
-.section-main .section-main__info, .section-main-reverse-engineering .section-main__info, .section-main-visualize .section-main__info, .section-main-drafts .section-main__info {
+.section-main .section-main__info, .section-main-reverse-engineering .section-main__info, .section-main-visualize .section-main__info, .section-main-projects .section-main__info, .section-main-drafts .section-main__info {
   text-align: center;
   color: white;
   padding-bottom: 40px;
 }
 
-.section-main .section-main__button, .section-main-reverse-engineering .section-main__button, .section-main-visualize .section-main__button, .section-main-drafts .section-main__button {
+.section-main .section-main__button, .section-main-reverse-engineering .section-main__button, .section-main-visualize .section-main__button, .section-main-projects .section-main__button, .section-main-drafts .section-main__button {
   margin: 0 auto;
 }
 
@@ -269,6 +270,10 @@ a:link, a:visited {
 
 .section-main-visualize {
   background-image: url("../images/bg/bg-section-visualize.png");
+}
+
+.section-main-projects {
+  background-image: url("../images/bg/bg-section-projects_3.png");
 }
 
 .section-main-drafts {
@@ -458,6 +463,25 @@ a:link, a:visited {
   position: absolute;
 }
 
+.sample__image {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+
+
+        margin-right: 50%;
+
+
+  max-height: 100%;
+}
+
+
 .card .card__title,
 .card .card__text {
   text-align: center;
@@ -472,6 +496,90 @@ a:link, a:visited {
 }
 
 .card .card__text {
+  font-size: 13pt;
+  line-height: 30px;
+}
+
+.section-portfolio .section-portfolio__samples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 75px;
+}
+
+.sample {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 4px 4px 8px #3e3e3e;
+          box-shadow: 4px 4px 8px #3e3e3e;
+}
+
+.sample {
+  transition: transform .25s, filter .25s, -webkit-filter .25s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .sample:hover {
+    -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.sample::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(146, 150, 166, 0.2);
+}
+
+.sample .sample__image {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.sample .sample__title,
+.sample .sample__text {
+  text-align: center;
+  text-shadow: 1px 1px 1px #3c3c3c;
+  color: white;
+  z-index: 1;
+}
+
+.sample .sample__title {
+  font-size: 20pt;
+  line-height: 45px;
+}
+
+.sample .sample__text {
   font-size: 13pt;
   line-height: 30px;
 }
@@ -534,7 +642,7 @@ a:link, a:visited {
 }
 
 .section-faq .section-faq__faq-list {
-  padding: 0 75px 50px 75px;
+  padding: 0 75px 0 75px;
 }
 
 .section-faq .faq-list .faq-list__ul {
@@ -800,6 +908,7 @@ a:link, a:visited {
   background-position: bottom;
   background-repeat: no-repeat;
   height: 450px;
+  margin-top: 75px;
 }
 
 .section-footer .section-footer__inner {
@@ -1130,12 +1239,12 @@ a:link, a:visited {
   .title-section, .modal .modal__title {
     line-height: 40px;
   }
-  .section-main .section-main__title-container, .section-main-reverse-engineering .section-main__title-container, .section-main-visualize .section-main__title-container, .section-main-drafts .section-main__title-container {
+  .section-main .section-main__title-container, .section-main-reverse-engineering .section-main__title-container, .section-main-visualize .section-main__title-container, .section-main-projects .section-main__title-container, .section-main-drafts .section-main__title-container {
     max-width: 100%;
     margin: 0 auto 0 0;
     padding-bottom: 475px;
   }
-  .section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-drafts .section-main__title {
+  .section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-projects .section-main__title, .section-main-drafts .section-main__title {
     text-align: center;
     font-size: 30pt;
     letter-spacing: 0;
@@ -1161,27 +1270,27 @@ a:link, a:visited {
 }
 
 @media screen and (max-width: 660px) {
-  .section-main, .section-main-reverse-engineering, .section-main-visualize, .section-main-drafts {
+  .section-main, .section-main-reverse-engineering, .section-main-visualize, .section-main-projects, .section-main-drafts {
     padding: 50px 30px 40px 30px;
   }
-  .section-main .section-main__header, .section-main-reverse-engineering .section-main__header, .section-main-visualize .section-main__header, .section-main-drafts .section-main__header {
+  .section-main .section-main__header, .section-main-reverse-engineering .section-main__header, .section-main-visualize .section-main__header, .section-main-projects .section-main__header, .section-main-drafts .section-main__header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .section-main .section-main__title-container, .section-main-reverse-engineering .section-main__title-container, .section-main-visualize .section-main__title-container, .section-main-drafts .section-main__title-container {
+  .section-main .section-main__title-container, .section-main-reverse-engineering .section-main__title-container, .section-main-visualize .section-main__title-container, .section-main-projects .section-main__title-container, .section-main-drafts .section-main__title-container {
     margin: 0 auto;
   }
-  .section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-drafts .section-main__title {
+  .section-main .section-main__title, .section-main-reverse-engineering .section-main__title, .section-main-visualize .section-main__title, .section-main-projects .section-main__title, .section-main-drafts .section-main__title {
     font-size: 24pt;
   }
-  .section-main .menu__list, .section-main-reverse-engineering .menu__list, .section-main-visualize .menu__list, .section-main-drafts .menu__list {
+  .section-main .menu__list, .section-main-reverse-engineering .menu__list, .section-main-visualize .menu__list, .section-main-projects .menu__list, .section-main-drafts .menu__list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     gap: 10px 20px;
   }
-  .section-main .menu-contacts, .section-main-reverse-engineering .menu-contacts, .section-main-visualize .menu-contacts, .section-main-drafts .menu-contacts {
+  .section-main .menu-contacts, .section-main-reverse-engineering .menu-contacts, .section-main-visualize .menu-contacts, .section-main-projects .menu-contacts, .section-main-drafts .menu-contacts {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -1249,10 +1358,10 @@ a:link, a:visited {
 }
 
 @media screen and (max-width: 435px) {
-  .section-main, .section-main-reverse-engineering, .section-main-visualize, .section-main-drafts {
+  .section-main, .section-main-reverse-engineering, .section-main-visualize, .section-main-projects, .section-main-drafts {
     padding-top: 25px;
   }
-  .section-main .menu__list, .section-main-reverse-engineering .menu__list, .section-main-visualize .menu__list, .section-main-drafts .menu__list {
+  .section-main .menu__list, .section-main-reverse-engineering .menu__list, .section-main-visualize .menu__list, .section-main-projects .menu__list, .section-main-drafts .menu__list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

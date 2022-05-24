@@ -2,7 +2,20 @@
 {% load static %}
 
         {% block content %}
-
-
-
+        <section class="section-portfolio container">
+<!--            <h2 class="section-portfolio__title title-section">-->
+<!--                Приемры наших работ-->
+<!--            </h2>-->
+            {% for category, samples in portfolio.items %}
+            <h3 class="section-portfolio__title title-section">{{ category }}</h3>
+            <div class="section-portfolio__samples">
+                {% for sample in samples %}
+                <div class="sample">
+                    <img class="sample__image"
+                         src="../../static/my_site/images/sample/{{ sample.Image }}">
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </section>
         {% endblock content %}
