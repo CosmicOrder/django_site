@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'top-reverse.ru']
 
 # Application definition
 
@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'reverse_engineering_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'site_db',
-        'USER': 'postgres',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
         'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '',
