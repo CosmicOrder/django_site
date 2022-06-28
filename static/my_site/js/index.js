@@ -214,12 +214,12 @@ if (document.querySelector(".modal")) {
                 return false;
             }
         });
-        
+
         function sendForm(form) {
             let $that = $(form);
             let actionUrl = $that.attr('action');
             let formData = new FormData($that.get(0));
-        
+
             $.ajax({
                 url: actionUrl,
                 method: 'POST',
