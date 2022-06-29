@@ -1,21 +1,7 @@
-import os
-
-import pandas as pd
-from django.http import HttpResponse
 from django.shortcuts import render
 
 from my_site.models import Sample
 from my_site.site_content import main_page_content
-
-samples_path = os.getenv('SAMPLES_PATH', default='samples.xlsx')
-
-samples_from_excel_df = pd.read_excel(samples_path, keep_default_na=False)
-samples_from_excel = samples_from_excel_df.to_dict(orient='records')
-
-portfolio = {}
-for samples_from_excel in samples_from_excel:
-    portfolio.setdefault(samples_from_excel['Category'], []) \
-        .append(samples_from_excel)
 
 
 def index(request):
@@ -60,4 +46,3 @@ def projects(request):
     }
 
     return render(request, 'my_site/projects.html', context)
-
