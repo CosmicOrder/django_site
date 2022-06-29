@@ -9,28 +9,27 @@ def index(request):
 
 
 def reverse_engineering(request):
-    return render(request, 'my_site/reverse-engineering.html',
-                  {
-                      'page_name': '-reverse-engineering',
-                      'title': 'Реверсивный инжениринг'
-                  })
+    context = {
+        'page_name': '-reverse-engineering',
+        'title': 'Реверсивный инжениринг',
+    }
+    return render(request, 'my_site/reverse-engineering.html', context)
 
 
 def drafts(request):
-    return render(request, 'my_site/drafts.html',
-                  {
-                      'page_name': '-drafts',
-                      'title': 'Разработка КД'
-
-                  })
+    context = {
+        'page_name': '-drafts',
+        'title': 'Разработка КД',
+    }
+    return render(request, 'my_site/drafts.html', context)
 
 
 def visualize(request):
-    return render(request, 'my_site/visualize.html',
-                  {
-                      'page_name': '-visualize',
-                      'title': '3д моделирование'
-                  })
+    context = {
+        'page_name': '-visualize',
+        'title': '3д моделирование',
+    }
+    return render(request, 'my_site/visualize.html', context)
 
 
 def projects(request):
