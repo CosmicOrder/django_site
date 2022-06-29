@@ -1,8 +1,10 @@
 import os
 
 import pandas as pd
+from django.http import HttpResponse
 from django.shortcuts import render
 
+from my_site.models import Sample
 from my_site.site_content import main_page_content
 
 samples_path = os.getenv('SAMPLES_PATH', default='samples.xlsx')
@@ -45,8 +47,17 @@ def visualize(request):
                   })
 
 
-data = {'page_name': '-projects', 'title': 'Портфолио', 'portfolio': portfolio}
-
-
 def projects(request):
-    return render(request, 'my_site/projects.html', data)
+    samples = Sample.objects.all()
+    portfolio = {}
+    for sample in samples:
+        portfolio.setdefault(sample.category, []).append(sample)
+
+    context = {
+        'page_name': '-projects',
+        'title': 'Портфолио',
+        'portfolio': portfolio,
+    }
+
+    return render(request, 'my_site/projects.html', context)
+

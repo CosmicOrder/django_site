@@ -29,9 +29,9 @@ class Sample(models.Model):
     DRAFTS = 'Конструкторская документация'
     VISUALIZE = '3д моделирование/визуализация'
     CATEGORIES = [
-        ('REVERSE', REVERSE),
-        ('DRAFTS', DRAFTS),
-        ('VISUALIZE', VISUALIZE),
+        ('Реверсивный инжиниринг', REVERSE),
+        ('Конструкторская документация', DRAFTS),
+        ('3д моделирование/визуализация', VISUALIZE),
     ]
     category = models.CharField(
         'Категория',

@@ -156,7 +156,8 @@
                 </h2>
                 <form class="modal__form" name="form" id="form" type="text"
                       enctype="multipart/form-data"
-                      action="/form" method="POST">
+                      action="form" method="POST">
+                    {% csrf_token %}
                     <input class="modal__input" name="name" id="name" type="text" autocomplete="name" placeholder="Меня зовут">
                     <input class="modal__input" name="email" id="email" type="email" autocomplete="email" placeholder="E-mail">
                     <input class="modal__input" name="tel" id="tel" type="tel" autocomplete="tel" placeholder="+7 999 999 99 99">

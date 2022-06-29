@@ -12,7 +12,7 @@
                 {% for sample in samples %}
                 <div class="sample">
                     <img class="sample__image"
-                         src="../../static/my_site/images/sample/{{ sample.Image }}">
+                         src="{{ sample.image.url }}">
                 </div>
                 {% endfor %}
             </div>
