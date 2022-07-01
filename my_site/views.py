@@ -1,3 +1,6 @@
+import json
+
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from my_site.models import Sample
@@ -45,3 +48,16 @@ def projects(request):
     }
 
     return render(request, 'my_site/projects.html', context)
+
+
+def form_processing(request):
+    data = {
+        'name': request.POST['name'],
+        'email': request.POST['email'],
+    }
+
+    j_data = json.dumps(data)
+
+    print(request.POST['name'])
+    print(request.POST['email'])
+    return HttpResponse(j_data, content_type='application/json')
