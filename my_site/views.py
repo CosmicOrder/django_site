@@ -14,7 +14,7 @@ def index(request):
 def reverse_engineering(request):
     context = {
         'page_name': '-reverse-engineering',
-        'title': 'Реверсивный инжениринг',
+        'title': 'Реверсивный инжиниринг',
     }
     return render(request, 'my_site/reverse-engineering.html', context)
 
@@ -51,13 +51,11 @@ def projects(request):
 
 
 def form_processing(request):
-    data = {
-        'name': request.POST['name'],
-        'email': request.POST['email'],
-    }
+    answer = {'success': True}
 
-    j_data = json.dumps(data)
+    json_answer = json.dumps(answer)
 
     print(request.POST['name'])
     print(request.POST['email'])
-    return HttpResponse(j_data, content_type='application/json')
+
+    return HttpResponse(json_answer, content_type='application/json')
